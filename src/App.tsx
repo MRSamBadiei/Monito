@@ -272,16 +272,16 @@ const GalleryPet: React.FC<{ data: PetData[] }> = ({ data }) => {
     return (
       <div className="rounded-xl shadow-lg text-black p-3">
         <img src={data.img} className="w-full rounded-lg mx-auto" />
-        <p className="mt-3 font-bold text-xl">{data.title}</p>
-        <div className="mt-2 flex text-lg text-gray-500">
-          <p className="mr-5">
+        <p className="mt-3 font-bold text-base md:text-xl">{data.title}</p>
+        <div className="mt-2 flex flex-col md:flex-row text-base md:text-xl text-gray-500">
+          <p className="mr-0 md:mr-5 font-light">
             Gene: <span className="font-bold">{data.gene}</span>
           </p>
-          <p>
+          <p className="font-light">
             Age: <span className="font-bold">{data.age}</span>
           </p>
         </div>
-        <p className="mt-2 font-bold text-xl">{data.price}</p>
+        <p className="mt-2 font-bold text-base md:text-xl">{data.price}</p>
       </div>
     );
   };
@@ -299,21 +299,21 @@ const GalleryPro: React.FC<{ data: ProData[] }> = ({ data }) => {
     return (
       <div className="rounded-xl shadow-lg text-black p-3">
         <img src={data.img} className="w-full rounded-lg mx-auto" />
-        <p className="mt-3 font-bold text-xl">{data.title}</p>
-        <div className="mt-2 flex text-lg text-gray-500">
-          <p className="mr-5">
+        <p className="mt-3 font-bold text-base md:text-xl">{data.title}</p>
+        <div className="mt-2 flex flex-col md:flex-row text-lg text-gray-500">
+          <p className="mr-0 md:mr-5 font-light">
             Product: <span className="font-bold">{data.product}</span>
           </p>
           {data.size ? (
-            <p>
+            <p className="font-light">
               Size: <span className="font-bold">{data.size}</span>
             </p>
           ) : (
             <></>
           )}
         </div>
-        <p className="mt-2 font-bold text-xl">{data.price}</p>
-        <div className="mt-2 mon-yellow text-sm md:text-lg rounded-full font-semibold flex p-2 mb-2">
+        <p className="mt-2 font-bold text-base md:text-xl">{data.price}</p>
+        <div className="mt-2 mon-yellow text-xs md:text-lg rounded-full font-semibold flex p-2 mb-2">
           <img src={Gift} className="mx-3" />
           Free Toy & Free Shaker
         </div>
@@ -390,9 +390,9 @@ const Section: React.FC<{
   return (
     <div className={`mt-10 ${data.className}`}>
       <p className="dark-blue">{data.title}</p>
-      <div className="flex justify-between">
+      <div className="flex justify-between mt-5 md:mt-0">
         <p className="dark-blue font-bold text-2xl my-auto">{data.title2}</p>
-        <div className="dark-blue border-2 border-solid border-dark-blue p-4 rounded-full px-6 mr-5">
+        <div className="dark-blue border-2 border-solid border-dark-blue p-2 md:p-4 rounded-full px-6 text-sm md:text-base mr-5">
           View More
         </div>
       </div>
@@ -405,7 +405,7 @@ const Banner = () => {
     <div className="dark-blue-bg flex flex-col md:flex-row rounded-3xl mt-10">
       <div className="w-full md:w-1/2  rounded-3xl relative overflow-hidden">
         <div className="w-full h-full absolute mon-yellow z-0 rounded-full -rotate-12 -translate-y-16 scale-125"></div>
-        <div className="flex flex-col w-full h-full justify-center items-center dark-blue relative z-10 p-10 md:p-0">
+        <div className="flex flex-col w-full h-full justify-center items-center dark-blue relative z-10 p-4 mb-16 md:mb-0 md:p-0">
           <p className="font-bold text-2xl">One More Friend</p>
           <p className="text-2xl">Thousands More Fun!</p>
           <p className="mt-5 mx-10">
@@ -414,10 +414,10 @@ const Banner = () => {
             that can meet your needs!
           </p>
           <div className="flex mt-5">
-            <div className="dark-blue border-2 border-solid border-dark-blue p-4 rounded-full px-6 mr-5">
+            <div className="dark-blue border-2 border-solid border-dark-blue p-2 md:p-4 rounded-full px-6 text-sm md:text-base mr-5">
               View Intro
             </div>
-            <div className="dark-blue-bg text-white p-4 rounded-full px-6">
+            <div className="dark-blue-bg text-sm md:text-base text-white p-2 md:p-4 rounded-full px-6">
               Explore Now
             </div>
           </div>

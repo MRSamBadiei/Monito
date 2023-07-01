@@ -240,8 +240,10 @@ const BelowNavbar = () => {
   return (
     <div className="flex flex-col md:flex-row dark-blue">
       <div>
-        <p className="font-bold text-7xl">One More Friend</p>
-        <p className="text-7xl font-extralight">Thousands More Fun!</p>
+        <p className="text-6xl font-bold md:text-7xl">One More Friend</p>
+        <p className="text-5xl md:text-7xl font-extralight">
+          Thousands More Fun!
+        </p>
         <p className="mt-5">
           Having a pet means you have more joy, a new friend, a happy person who
           will always be with you to have fun. We have 200+ different pets that
